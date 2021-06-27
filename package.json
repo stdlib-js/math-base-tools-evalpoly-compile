@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-tools-evalpoly-compile",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Compile a module for evaluating a polynomial.",
   "license": "Apache-2.0",
   "author": {
