@@ -108,7 +108,7 @@ The coefficients should be ordered in **ascending** degree, thus matching summat
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<body>
 <script type="module">
 
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
@@ -137,7 +137,7 @@ str = compile( coef );
 console.log( str );
 
 </script>
-</head>
+</body>
 </html>
 ```
 
@@ -204,6 +204,13 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [dependencies-url]: https://david-dm.org/stdlib-js/math-base-tools-evalpoly-compile/main
 
 -->
+
+[umd]: https://github.com/umdjs/umd
+[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+
+[deno-url]: https://github.com/stdlib-js/math-base-tools-evalpoly-compile/tree/deno
+[umd-url]: https://github.com/stdlib-js/math-base-tools-evalpoly-compile/tree/umd
+[esm-url]: https://github.com/stdlib-js/math-base-tools-evalpoly-compile/tree/esm
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
 [chat-url]: https://gitter.im/stdlib-js/stdlib/
