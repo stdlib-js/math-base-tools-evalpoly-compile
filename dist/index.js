@@ -1,0 +1,5 @@
+"use strict";var T=function(t,i){return function(){return i||t((i={exports:{}}).exports,i),i.exports}};var g=T(function(j,E){
+var f=require("path").join,s=require('@stdlib/fs-read-file/dist').sync,a=require('@stdlib/string-replace/dist'),o=require('@stdlib/assert-is-integer/dist').isPrimitive,v={encoding:"utf8"},l=f(__dirname,"templates"),p=s(f(l,"single_coefficient.js.txt"),v),_=s(f(l,"evalpoly.js.txt"),v),m=s(f(l,"empty.js.txt"),v),x=s(f(l,"loop.js.txt"),v),L=68;function P(t){var i,r,n,u,e;if(n=t.length,n===0)return m;if(n===1)return r=t[0].toString(),o(t[0])&&(r+=".0"),a(p,"{{coefficient}}",r);if(u=n-1,n>500){for(r="",e=0;e<n;e++)r+="	"+t[e].toString(),o(t[e])&&(r+=".0"),e<u&&(r+=",\n");return a(x,"{{coefficients}}",r)}for(i=t[0].toString(),o(t[0])&&(i+=".0"),e=1;e<n;e++)i+=" + (x * ",e<u&&(i+="("),i+=t[e].toString(),o(t[e])&&(i+=".0");for(e=0;e<2*(n-1)-1;e++)i+=")";return r=t[0].toString(),o(t[0])&&(r+=".0"),r=a(_,"{{coefficient}}",r),r=a(r,"{{horner}}",i),a(r,"{{eslint}}",i.length>L?" // eslint-disable-line max-len":"")}E.exports=P
+});var A=g();module.exports=A;
+/** @license Apache-2.0 */
+//# sourceMappingURL=index.js.map
