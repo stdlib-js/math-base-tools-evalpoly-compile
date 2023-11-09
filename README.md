@@ -70,6 +70,8 @@ var str = compile( [ 3.0, 2.0, 1.0 ] );
 
 In the example above, the output `string` would correspond to the following module:
 
+<!-- eslint-disable no-unused-expressions -->
+
 ```javascript
 'use strict';
 
@@ -83,7 +85,6 @@ In the example above, the output `string` would correspond to the following modu
 * -   The implementation uses [Horner's rule][horners-method] for efficient computation.
 *
 * [horners-method]: https://en.wikipedia.org/wiki/Horner%27s_method
-*
 *
 * @private
 * @param {number} x - value at which to evaluate the polynomial
