@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-tools-evalpoly-compile",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Compile a module for evaluating a polynomial.",
   "license": "Apache-2.0",
   "author": {
@@ -37,9 +37,9 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/assert-is-integer": "^0.1.0",
-    "@stdlib/fs-read-file": "^0.1.1",
-    "@stdlib/string-replace": "^0.1.1"
+    "@stdlib/assert-is-integer": "^0.2.0",
+    "@stdlib/fs-read-file": "^0.2.0",
+    "@stdlib/string-replace": "^0.2.0"
   },
   "devDependencies": {
     "@stdlib/array-float64": "^0.1.1",
@@ -47,7 +47,7 @@
     "@stdlib/assert-is-string": "^0.1.1",
     "@stdlib/math-base-special-round": "^0.1.1",
     "@stdlib/random-base-randu": "^0.1.0",
-    "@stdlib/utils-try-require": "^0.1.1",
+    "@stdlib/utils-try-require": "^0.2.0",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git",
