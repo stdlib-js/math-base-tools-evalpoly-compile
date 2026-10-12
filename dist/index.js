@@ -1,5 +1,24 @@
-"use strict";var L=function(r,f){return function(){try{return f||r((f={exports:{}}).exports,f),f.exports}catch(t){throw (f=0, t)}};};var y=L(function(q,u){
-var l=require("path").join,s=require('@stdlib/fs-read-file/dist').sync,T=require('@stdlib/string-replace/dist'),E=require('@stdlib/assert-is-integer/dist').isPrimitive,A=require('@stdlib/array-float32/dist'),v={encoding:"utf8"},p=l(__dirname,"templates"),_=s(l(p,"single_coefficient.js.txt"),v),g=s(l(p,"evalpoly.js.txt"),v),P=s(l(p,"evalpoly.float32.js.txt"),v),x=s(l(p,"empty.js.txt"),v),m=s(l(p,"loop.js.txt"),v),F=s(l(p,"loop.float32.js.txt"),v),O=68;function j(r,f){var t,a,n,i,o,d,e;if(a={dtype:"float64"},arguments.length>1&&(a.dtype=f.dtype||a.dtype),o=r.length,o===0)return x;if(a.dtype==="float32"&&(r=new A(r)),o===1)return i=r[0].toString(),E(r[0])&&(i+=".0"),T(_,"{{coefficient}}",i);if(d=o-1,o>500){for(i="",e=0;e<o;e++)i+="	"+r[e].toString(),E(r[e])&&(i+=".0"),e<d&&(i+=",\n");return a.dtype==="float32"?n=F:n=m,T(n,"{{coefficients}}",i)}for(a.dtype==="float32"?t="float64ToFloat32(":t="",t+=r[0].toString(),E(r[0])&&(t+=".0"),e=1;e<o;e++)a.dtype==="float32"?(t+=" + float64ToFloat32(x * ",e<d&&(t+="float64ToFloat32(")):(t+=" + (x * ",e<d&&(t+="(")),t+=r[e].toString(),E(r[e])&&(t+=".0");for(e=0;e<2*(o-1)-1;e++)t+=")";return a.dtype==="float32"&&(t+=")"),i=r[0].toString(),E(r[0])&&(i+=".0"),a.dtype==="float32"?n=P:n=g,i=T(n,"{{coefficient}}",i),i=T(i,"{{horner}}",t),T(i,"{{eslint}}",t.length>O?" // eslint-disable-line max-len":"")}u.exports=j
-});var M=y();module.exports=M;
 /** @license Apache-2.0 */
-//# sourceMappingURL=index.js.map
+
+'use strict';
+
+/**
+* Compile a module for evaluating a polynomial.
+*
+* @module @stdlib/math-base-tools-evalpoly-compile
+*
+* @example
+* var compile = require( '@stdlib/math-base-tools-evalpoly-compile' );
+*
+* var str = compile( [3.0,2.0,1.0] ); // 3*10^0 + 2*10^1 + 1*10^2
+* // returns <string>
+*/
+
+// MODULES //
+
+var main = require( './main.js' );
+
+
+// EXPORTS //
+
+module.exports = main;
